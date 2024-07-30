@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import styles from "./FeedBackModal.module.css";
-import { ReactComponent as CrossBtn } from "../../../assets/crossBtn.svg";
-import { errorHandler } from "../../../config/helper-methods";
+import styles from "./Button.module.css";
+import { ReactComponent as CrossBtn } from "../../assets/crossBtn.svg";
+import { errorHandler } from "../../config/helper-methods";
 
 const style = {
 	position: "absolute",
@@ -16,7 +16,7 @@ const style = {
 	p: 4,
 };
 
-const FeedBackModal = ({ isOpen, onSuccess, onDismiss }) => {
+const Button = ({ isOpen, onSuccess, onDismiss }) => {
 	const [formFields, setFormFields] = useState({
 		fullName: "",
 		emailId: "",
@@ -125,4 +125,4 @@ const FeedBackModal = ({ isOpen, onSuccess, onDismiss }) => {
 	);
 };
 
-export default FeedBackModal;
+export default Button;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Logo from "../Logo/Logo";
 import styles from "./NavBar.module.css";
 import SearchBar from "../SearchBar/SearchBar";
-import FeedBackModal from "../Modals/FeedBackModal/FeedBackModal";
+import FeedBackModal from "../Button/Button";
 import { showToast } from "../../config/helper-methods";
 import { useNavigate } from "react-router-dom";
 
@@ -38,7 +38,7 @@ const NavBar = ({ data, logo = false, search = false, feedback = false }) => {
 					<div
 						className={styles.nav_link}
 						onClick={() => _toggleFeedBackModal(true)}>
-						Feedback
+						Give Feedback
 					</div>
 				) : null}
 			</nav>
