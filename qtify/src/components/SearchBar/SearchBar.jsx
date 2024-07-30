@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./SearchBar.module.css";
 import { ReactComponent as SearchIcon } from "../../assets/Search icon.svg";
-//import Menu from "../Menu/Menu";
+import Menu from "../Menu/Menu";
 import useComponentVisible from "../../hooks/useComponentVisible";
 
 const SearchBar = (props) => {
