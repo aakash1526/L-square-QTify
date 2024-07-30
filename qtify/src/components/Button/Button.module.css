@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 .wrapper {
-	font-family: "Poppins", sans-serif;
+	font-family: "Poppins";
 	width: 526px;
 	height: 524px;
 	border-radius: 10px;

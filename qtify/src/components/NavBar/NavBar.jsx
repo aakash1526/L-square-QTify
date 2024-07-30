@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import Logo from "../Logo/Logo";
 import styles from "./NavBar.module.css";
 import SearchBar from "../SearchBar/SearchBar";
-import FeedBackModal from "../Button/Button";
+import Button from "../Button/Button";
 import { showToast } from "../../config/helper-methods";
 import { useNavigate } from "react-router-dom";
 
 const NavBar = ({ data, logo = false, search = false, feedback = false }) => {
-	const [isFeedBackModalOpen, setIsFeedBackModalOpen] = useState(false);
+	const [isButtonOpen, setIsButtonOpen] = useState(false);
 	const navigate = useNavigate();
 
-	const _toggleFeedBackModal = (value = false) => {
-		setIsFeedBackModalOpen(value);
+	const _toggleButton = (value = false) => {
+		setIsButtonOpen(value);
 	};
 
 	const _onSuccess = () => {
@@ -37,15 +37,15 @@ const NavBar = ({ data, logo = false, search = false, feedback = false }) => {
 				{feedback ? (
 					<div
 						className={styles.nav_link}
-						onClick={() => _toggleFeedBackModal(true)}>
+						onClick={() => _toggleButton(true)}>
 						Give Feedback
 					</div>
 				) : null}
 			</nav>
-			<FeedBackModal
-				isOpen={isFeedBackModalOpen}
+			<Button
+				isOpen={isButtonOpen}
 				onSuccess={_onSuccess}
-				onDismiss={_toggleFeedBackModal}
+				onDismiss={_toggleButton}
 			/>
 		</div>
 	);
