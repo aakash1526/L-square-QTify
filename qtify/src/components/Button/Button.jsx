@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import styles from "./Button.module.css";
@@ -123,6 +123,19 @@ const Button = ({ isOpen, onSuccess, onDismiss }) => {
 			</Modal>
 		</div>
 	);
+};
+
+export default Button;*/
+import React from "react";
+import styles from "./Button.module.css";
+
+const Button = ({ text, image }) => {
+  return (
+    <button className={styles.button}>
+      {image && <img src={image} alt="button icon" className={styles.icon} />}
+      {text}
+    </button>
+  );
 };
 
 export default Button;
