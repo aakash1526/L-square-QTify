@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./Section.module.css";
 import Card from "../../components/Card/Card";
 import Carousel from "../Carousel/Carousel";
-import SkeletonLoader from "../SkeletonLoader/SkeletonLoader";
 
 const Section = ({ title, data, type, header, loadingState }) => {
 	const [carouselToggle, setCarouselToggle] = useState(true);
@@ -38,8 +37,6 @@ const Section = ({ title, data, type, header, loadingState }) => {
 						/>
 					)}
 				</div>
-			) : loadingState ? (
-				<SkeletonLoader name={"card"} count={5} />
 			) : (
 				<p>No Data found</p>
 			)}

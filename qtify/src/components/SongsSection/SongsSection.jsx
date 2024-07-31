@@ -3,10 +3,10 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import Section from "../Section/Section";
-import styles from "./FilterTabs.module.css";
+import styles from "./SongsSection.module.css";
 import { allSongsTabs } from "../../config/helper-config";
 
-const FilterTabs = ({ data, loadingState }) => {
+const  SongSection = ({ data, loadingState }) => {
 	const [value, setValue] = useState(0);
 
 	const _handleTabs = (e, val) => {
@@ -62,4 +62,4 @@ const FilterTabs = ({ data, loadingState }) => {
 	);
 };
 
-export default FilterTabs;
+export default SongSection;

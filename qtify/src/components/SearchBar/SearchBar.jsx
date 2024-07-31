@@ -45,7 +45,6 @@ const SearchBar = (props) => {
 					</button>
 				</form>
 			</div>
-
 			{isComponentVisible && (
 				<div className={styles.dropdownWrapper} ref={ref}>
 					{filteredOptions?.length ? (
@@ -57,6 +56,7 @@ const SearchBar = (props) => {
 					) : null}
 				</div>
 			)}
+			
 		</div>
 	);
 };

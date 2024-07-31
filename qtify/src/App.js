@@ -1,7 +1,6 @@
 import React from "react";
-import { Route, Routes,Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
-//import AlbumDetails from "./pages/AlbumDetails/AlbumDetails";
 
 function App() {
 	return (

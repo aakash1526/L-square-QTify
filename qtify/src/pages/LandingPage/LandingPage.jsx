@@ -8,16 +8,12 @@ import { useState } from "react";
 import styles from "./LandingPage.module.css";
 import { Toaster } from "react-hot-toast";
 import { errorHandler } from "../../config/helper-methods";
-import { accordionData } from "../../config/helper-config";
 import HeroSection from "../../components/HeroSection/HeroSection.jsx";
 import NavBar from "../../components/NavBar/NavBar.jsx";
 import Section from "../../components/Section/Section.jsx";
-import FilterTabs from "../../components/FilterTabs/FilterTabs.jsx";
-import CustomAccordion from "../../components/Accordion/CustomAccordion.jsx";
+import FilterTabs from "../../components/SongsSection/SongsSection.jsx";
 import SearchBar from "../../components/SearchBar/SearchBar.jsx";
-import Footer from "../../components/Footer/Footer.jsx";
 
-//Accordion Data.(Sending as a props).
 
 function LandingPage() {
 	const [topAlbumData, setTopAlbumData] = useState([]);
@@ -115,21 +111,11 @@ function LandingPage() {
 				<div>
 					<h3 className={styles.tabsTitle}>Songs</h3>
 				</div>
-				<FilterTabs data={allSongsData} loadingState={loadingState.allSongs} />
+				<FilterTabs data={allSongsData} loadingState={loadingState.allSongs}/>
 			</div>
 			<hr className={styles.line}></hr>
-			<div className={styles.customAccordionWrapper}>
-				<h1 className={styles.accordionHeader}>FAQs</h1>
-
-				{accordionData?.length ? (
-					accordionData.map((each, index) => {
-						return <CustomAccordion key={index} data={each} />;
-					})
-				) : (
-					<></>
-				)}
-			</div>
-			<Footer />
+			
+			
 		</>
 	);
 }
